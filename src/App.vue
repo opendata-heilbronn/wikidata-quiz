@@ -1,21 +1,26 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-</template>
-
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import QuizPage from './pages/QuizPage.vue';
+
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
+    QuizPage
   }
 });
 </script>
 
 <style lang="scss">
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -25,3 +30,7 @@ export default defineComponent({
   margin-top: 60px;
 }
 </style>
+
+<template>
+  <quiz-page ></quiz-page>
+</template>
